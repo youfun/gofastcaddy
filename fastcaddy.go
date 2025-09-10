@@ -1,11 +1,11 @@
-package fastcaddy
+package gofastcaddy
 
 import (
-	"github.com/youfun/fastcaddy/internal/api"
-	"github.com/youfun/fastcaddy/internal/config"
-	"github.com/youfun/fastcaddy/internal/routes"
-	"github.com/youfun/fastcaddy/internal/tls"
-	"github.com/youfun/fastcaddy/internal/utils"
+	"github.com/youfun/gofastcaddy/internal/api"
+	"github.com/youfun/gofastcaddy/internal/config"
+	"github.com/youfun/gofastcaddy/internal/routes"
+	"github.com/youfun/gofastcaddy/internal/tls"
+	"github.com/youfun/gofastcaddy/internal/utils"
 )
 
 // FastCaddy 主要客户端 - 提供 Caddy 配置管理的统一接口

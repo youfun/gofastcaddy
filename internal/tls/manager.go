@@ -1,9 +1,9 @@
 package tls
 
 import (
-	"github.com/youfun/fastcaddy/internal/api"
-	"github.com/youfun/fastcaddy/internal/config"
-	"github.com/youfun/fastcaddy/pkg/types"
+	"github.com/youfun/gofastcaddy/internal/api"
+	"github.com/youfun/gofastcaddy/internal/config"
+	"github.com/youfun/gofastcaddy/pkg/types"
 )
 
 // 常量定义 - TLS 自动化配置路径
@@ -77,7 +77,7 @@ func (m *Manager) AddTLSInternalConfig() error {
 	return m.client.PutConfig(policies, policiesPath, "POST")
 }
 
-// AddACMEConfig 添加 ACME 配置 - 对应 Python 的 add_acme_config(cf_token) 函数  
+// AddACMEConfig 添加 ACME 配置 - 对应 Python 的 add_acme_config(cf_token) 函数
 // 为生产环境配置 ACME 证书颁发者（使用 Cloudflare）
 func (m *Manager) AddACMEConfig(cfToken string) error {
 	// 检查自动化路径是否已存在

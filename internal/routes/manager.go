@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/youfun/fastcaddy/internal/api"
-	"github.com/youfun/fastcaddy/internal/config"
-	"github.com/youfun/fastcaddy/pkg/types"
+	"github.com/youfun/gofastcaddy/internal/api"
+	"github.com/youfun/gofastcaddy/internal/config"
+	"github.com/youfun/gofastcaddy/pkg/types"
 )
 
 // 常量定义 - 服务器和路由配置路径
@@ -44,9 +44,9 @@ func (m *Manager) InitRoutes(serverName string, skip int) error {
 
 	// 创建基础 HTTP 服务器配置
 	serverConfig := types.HTTPServer{
-		Listen:    []string{":80", ":443"},           // 监听 HTTP 和 HTTPS 端口
-		Routes:    []types.Route{},                   // 空路由列表
-		Protocols: []string{"h1", "h2"},              // 支持 HTTP/1.1 和 HTTP/2
+		Listen:    []string{":80", ":443"}, // 监听 HTTP 和 HTTPS 端口
+		Routes:    []types.Route{},         // 空路由列表
+		Protocols: []string{"h1", "h2"},    // 支持 HTTP/1.1 和 HTTP/2
 	}
 
 	// 设置服务器配置

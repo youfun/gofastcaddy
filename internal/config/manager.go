@@ -1,8 +1,9 @@
 package config
 
 import (
-	"github.com/youfun/fastcaddy/internal/api"
 	"strings"
+
+	"github.com/youfun/gofastcaddy/internal/api"
 )
 
 // Manager 配置管理器 - 提供配置操作的高级接口
@@ -95,7 +96,7 @@ func (m *Manager) InitPath(path string, skip int) error {
 	// 遍历路径中的每个部分
 	for i, key := range keys {
 		currentKeys = append(currentKeys, key)
-		
+
 		// 如果当前索引小于跳过数量，则继续下一个
 		if i < skip {
 			continue
@@ -104,7 +105,7 @@ func (m *Manager) InitPath(path string, skip int) error {
 		// 为当前路径创建空配置
 		currentPath := KeysToPath(currentKeys...)
 		emptyConfig := make(map[string]interface{})
-		
+
 		if err := m.client.PutConfig(emptyConfig, currentPath, "POST"); err != nil {
 			return err
 		}
