@@ -1,4 +1,4 @@
-module github.com/youfun/fastcaddy
+module github.com/youfun/gofastcaddy
 
 go 1.21
 
